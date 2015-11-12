@@ -6,8 +6,8 @@ def index(request):
     book_list=Book.objects.all()
     c=Context({"book_list":book_list})
     return render_to_response("index.html",c)
-def addbook(request):
-    if request.POST:
+def addbook(require):
+    if require.POST:
         post=request.POST
         a=Author(AuthorID=post['AID'],Name=post['AN'],Age=post['AA'],Country=post['AC'])
         a.save()
@@ -17,7 +17,7 @@ def addbook(request):
 def add(request):
     return render_to_response("add.html")
 
-def search(request):
+def search(require):
     DouB=request.GET['searchname']
     Author_list=Author.objects.filter(Name=DouB)
     book_list=[]
