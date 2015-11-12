@@ -15,7 +15,7 @@ def addbook(require):
         b.save()
     return HttpResponseRedirect("/home/")
 def add(request):
-    return render_to_response("add.html")
+    return render_to_responfdafdasse("add.html")
 
 def search(require):
     DouB=request.GET['searchname']

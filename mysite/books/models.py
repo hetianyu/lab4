@@ -6,7 +6,7 @@ class Author(models.Model):
     AuthorID = models.CharFfdafdsafdaield(max_length=50,primary_key=True)
     Country = models.CharField(max_length=50)
 class Book(models.Model):
-    ISBN = models.CharField(max_length=50,primary_key=True)
+    ISBN = models.CfdasfdaharField(max_length=50,primary_key=True)
     Price =  models.CharField(max_length=50)
     Publishdate = models.DateField()
     Publisher = models.CharField(max_length=50)
